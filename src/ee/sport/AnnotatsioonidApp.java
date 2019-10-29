@@ -13,6 +13,7 @@ public class AnnotatsioonidApp {
 		Treener vaikimisiTreener = kontekst.getBean("sulgpalliTreener", Treener.class);
 		
 		System.out.println(otseneTreener.saaIgapaevaneTrenn());
+		System.out.println(otseneTreener.saaIgapaevaneEttekuulutus());
 		System.out.println(vaikimisiTreener.saaIgapaevaneTrenn());
 		
 		kontekst.close();
