@@ -15,6 +15,7 @@ public class AnnotatsioonidApp {
 		System.out.println(otseneTreener.saaIgapaevaneTrenn());
 		System.out.println(otseneTreener.saaIgapaevaneEttekuulutus());
 		System.out.println(vaikimisiTreener.saaIgapaevaneTrenn());
+		System.out.println(vaikimisiTreener.saaIgapaevaneEttekuulutus());
 		
 		kontekst.close();
 	}
