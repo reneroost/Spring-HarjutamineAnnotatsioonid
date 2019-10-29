@@ -1,4 +1,4 @@
-package ee.sport;
+package ee.sport.teenused;
 
 import java.util.Random;
 

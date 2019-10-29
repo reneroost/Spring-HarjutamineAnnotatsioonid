@@ -1,6 +1,8 @@
-package ee.sport;
+package ee.sport.appid;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import ee.sport.treenerid.Treener;
 
 public class AnnotatsioonidApp {
 

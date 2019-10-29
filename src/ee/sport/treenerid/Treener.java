@@ -1,4 +1,4 @@
-package ee.sport;
+package ee.sport.treenerid;
 
 public interface Treener {
 	

@@ -1,22 +1,21 @@
-package ee.sport;
+package ee.sport.treenerid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("seeLobusTreener")
-public class TenniseTreener implements Treener {
-	
+import ee.sport.teenused.EttekuulutusTeenus;
+
+@Component
+public class LauatenniseTreener implements Treener {
+
+	@Autowired
+	@Qualifier("andmebaasiEttekuulutusTeenus")
 	private EttekuulutusTeenus ettekuulutusTeenus;
 	
-	@Autowired
-	public TenniseTreener(@Qualifier("positiivneEttekuulutusTeenus") EttekuulutusTeenus ettekuulutusTeenus) {
-		this.ettekuulutusTeenus = ettekuulutusTeenus;
-	}
-
 	@Override
 	public String saaIgapaevaneTrenn() {
-		return "[TenniseTreener] Harjuta tagantkäe lööki 70 servi";
+		return "[LautenniseTreener] Mängi kolm treeningsetti";
 	}
 
 	@Override
