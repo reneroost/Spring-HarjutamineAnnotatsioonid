@@ -7,7 +7,7 @@ public class TenniseTreener implements Treener {
 
 	@Override
 	public String saaIgapaevaneTrenn() {
-		return "Harjuta tagantkäe lööki 70 servi";
+		return "[TenniseTreener] Harjuta tagantkäe lööki 70 servi";
 	}
 
 }
