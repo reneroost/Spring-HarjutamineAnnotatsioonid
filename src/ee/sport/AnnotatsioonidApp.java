@@ -9,13 +9,16 @@ public class AnnotatsioonidApp {
 		ClassPathXmlApplicationContext kontekst = 
 				new ClassPathXmlApplicationContext("rakenduseKontekst.xml");
 		
-		Treener otseneTreener = kontekst.getBean("seeLobusTreener", Treener.class);
-		Treener vaikimisiTreener = kontekst.getBean("sulgpalliTreener", Treener.class);
+		Treener tenniseTreener = kontekst.getBean("seeLobusTreener", Treener.class);
+		Treener sulgpalliTreener = kontekst.getBean("sulgpalliTreener", Treener.class);
+		Treener lauatenniseTreener = kontekst.getBean("lauatenniseTreener", Treener.class);
 		
-		System.out.println(otseneTreener.saaIgapaevaneTrenn());
-		System.out.println(otseneTreener.saaIgapaevaneEttekuulutus());
-		System.out.println(vaikimisiTreener.saaIgapaevaneTrenn());
-		System.out.println(vaikimisiTreener.saaIgapaevaneEttekuulutus());
+		System.out.println(tenniseTreener.saaIgapaevaneTrenn());
+		System.out.println(tenniseTreener.saaIgapaevaneEttekuulutus());
+		System.out.println(sulgpalliTreener.saaIgapaevaneTrenn());
+		System.out.println(sulgpalliTreener.saaIgapaevaneEttekuulutus());
+		System.out.println(lauatenniseTreener.saaIgapaevaneTrenn());
+		System.out.println(lauatenniseTreener.saaIgapaevaneEttekuulutus());
 		
 		kontekst.close();
 	}
