@@ -7,7 +7,7 @@ public class PositiivneEttekuulutusTeenus implements EttekuulutusTeenus {
 
 	@Override
 	public String saaEttekuulutus() {
-		return "Täna on sinu õnnepäev!";
+		return "[Olen positiivne]: Täna tuleb kena päev!";
 	}
 
 }

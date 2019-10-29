@@ -1,11 +1,13 @@
 package ee.sport;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class SulgpalliTreener implements Treener {
 	
+	@Qualifier("positiivneEttekuulutusTeenus")
 	public EttekuulutusTeenus ettekuulutusTeenus;
 
 	@Override
@@ -14,7 +16,7 @@ public class SulgpalliTreener implements Treener {
 	}
 	
 	@Autowired
-	public void looEttekuulutusTeenus(EttekuulutusTeenus ettekuulutusTeenus) {
+	public void looEttekuulutusTeenus(@Qualifier("suvalineEttekuulutusTeenus") EttekuulutusTeenus ettekuulutusTeenus) {
 		this.ettekuulutusTeenus = ettekuulutusTeenus;
 	}
 
