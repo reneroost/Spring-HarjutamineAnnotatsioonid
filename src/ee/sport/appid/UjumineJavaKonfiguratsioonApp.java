@@ -3,7 +3,7 @@ package ee.sport.appid;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import ee.sport.konfiguratsioon.SportKonfiguratsioon;
-import ee.sport.treenerid.Treener;
+import ee.sport.treenerid.UjumisTreener;
 
 public class UjumineJavaKonfiguratsioonApp {
 
@@ -12,10 +12,12 @@ public class UjumineJavaKonfiguratsioonApp {
 		AnnotationConfigApplicationContext kontekst = 
 				new AnnotationConfigApplicationContext(SportKonfiguratsioon.class);
 		
-		Treener tenniseTreener = kontekst.getBean("ujumisTreener", Treener.class);
+		UjumisTreener ujumisTreener = kontekst.getBean("ujumisTreener", UjumisTreener.class);
 		
-		System.out.println(tenniseTreener.saaIgapaevaneTrenn());
-		System.out.println(tenniseTreener.saaIgapaevaneEttekuulutus());
+		System.out.println(ujumisTreener.saaIgapaevaneTrenn());
+		System.out.println(ujumisTreener.saaIgapaevaneEttekuulutus());
+		System.out.println("email: " + ujumisTreener.getEmail());
+		System.out.println("meeskond: " + ujumisTreener.getMeeskond());
 		
 		kontekst.close();
 	}
